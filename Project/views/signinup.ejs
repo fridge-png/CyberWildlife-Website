@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Cyber Wildlife</title>
+
+    <script src="/scripts/script.js"></script>
+    <link rel="stylesheet" href="/styles/signinup_style.css">
+</head>
+<body>
+
+    <div id="maindiv">
+
+        <div id="buttons">
+            <button id="signinbutton" onclick="toggleSignIn()" >Sign In</button>
+            <button id="signupbutton" onclick="toggleSignUp()" class="inactive">Sign Up</button>
+        </div>
+
+        <h1>Welcome to Cyber Wildlife!</h1>
+
+        <form action="http://localhost:8081/signin" method="post" id="signinform">
+                    
+            <div class="inp">
+                <label for="username">Username: </label>
+                <input type="text" name="username" required>
+            </div>
+
+            <div class="inp">
+                <label for="password">Password: </label>
+                <input type="password" name="password" required></textarea>
+            </div>
+
+            <button type="submit" name="submit">Sign In</button>
+        </form>
+
+        <form action="http://localhost:8081/signup" method="post" id="signupform">
+                    
+            <div class="inp">
+                <label for="username">Username: </label>
+                <input type="text" name="username" required>
+            </div>
+
+            <div class="inp">
+                <label for="password">Password: </label>
+                <input type="password" name="password" required></textarea>
+            </div>
+
+            <div class="inp">
+                <label for="full_name">Full name: </label>
+                <input type="text" name="full_name" required></textarea>
+            </div>
+
+            <button type="submit" name="submit">Sign Up</button>
+        </form>
+    
+    </div>
+</body>
+</html>

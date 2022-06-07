@@ -1,0 +1,23 @@
+{
+  "name": "cyberwildlife",
+  "version": "1.0.0",
+  "description": "Modules required:\r express , multer , body-parser, mongoose, ejs , path , jsonwebtoken , express-session",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Youssef Darwich",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.5",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.16",
+    "path": "^0.12.7"
+  }
+}

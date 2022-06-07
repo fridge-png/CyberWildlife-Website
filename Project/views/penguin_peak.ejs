@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Penguin Peak</title>
+
+        <script src="/scripts/script.js"></script>
+        <link rel="stylesheet" href="/styles/animals_style.css">
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <a href="http://localhost:8081/home">Home</a>
+            |
+            <a href="http://localhost:8081/profile">Profile</a>
+            |
+            <a href="http://localhost:8081/about">About</a>
+            |
+            <div class="activelink">
+                Sites
+                <ul>
+                    <li><a href="http://localhost:8081/bamboo_forest">Bamboo Forest</a></li>
+                    <li><a href="http://localhost:8081/alligator_swamp">Alligator Swamp</a></li>
+                    <li><a href="http://localhost:8081/penguin_peak">Penguin Peak</a></li>
+                </ul>
+            </div>
+    
+        </header>
+
+        </header>
+
+        <section id="section1">
+            <h1>Penguin Peak: A Snowy Residence</h1>
+            <div id="container">
+                <img src="../Images/Penguin Peak/Banner_image.jpg">
+                <div id="pandas">
+                    <h2>PENGUINS</h2>
+                    <a href="#section4">Go to Live Footage of the Penguin Peak</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2">
+            <h3>Information</h3>
+            <div id="griddiv">
+                <div>
+                    <h4>Penguins</h4>
+                    <p>Penguins are a family of 17 to 19 species of birds that live primarily in the Southern Hemisphere. <br />
+                        They include the tiny blue penguins of Australia and New Zealand, the majestic emperor penguins of Antarctica and king penguins found on many sub- Antarctic islands, the endangered African penguin and the Galápagos penguin — the only penguin to be found north of the equator.<br />
+                        Though they are birds, penguins have flippers instead of wings.</p>
+                    <img src="../Images/Penguin Peak/Penguin1_image.png">
+                </div>
+
+                <div>
+                    <h4></h4>
+                    <p>They cannot fly and on land they waddle walking upright—though when snow conditions are right they will slide on their bellies.<br />
+                        In the water they are expert swimmers and divers, and some species can reach speeds of up to 15 miles per hour.<br />
+                        The penguin’s distinctive coloring—black body with white belly—helps camouflage the bird in the water as it searches for meals of small shrimp, fish, crabs and squid.</p>
+                    <img src="../Images/Penguin Peak/Penguin2_image.png">
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="line"></div>
+
+        <section id="section3">
+            <h2>Experiences</h2>
+    
+            <div id="cards">
+                <% experiences.forEach(element => { %>
+                    <div id="card">
+                        <h2> <%= element.title %></h2>
+                        <p id="desc"> <%= element.description %></p>
+                        <img src="<%=element.photo%>">
+                    </div>
+                <% }); %>
+    
+                <div id="addnew">
+                    <button id="plus" onclick="showForm()">+</button>
+    
+                    <div id="form">
+                        <form action="http://localhost:8081/processForm" method="post" enctype="multipart/form-data" id="expform">
+                    
+                            <input type="hidden" value="bamboo_forest" name="original">
+    
+                            <div class="inp">
+                                <label for="title">Title: </label>
+                                <input type="text" name="title" required>
+                            </div>
+    
+                            <div class="inp">
+                                <label for="desc">Description: </label>
+                                <textarea name="desc" required></textarea>
+                            </div>
+    
+                            <div class="inp">
+                                <label for="photo">Photo: 
+                                <input type="file" id="photo" name="user_image" required>
+                                </label>
+                            </div>
+                    
+                            <button type="submit" id="submit" name="submit">submit</button>
+                        </form>
+                    </div>
+                </div>  
+    
+            </div>
+    
+            <div class="line"></div>
+    
+            <div id="apidiv">
+                <h2>Find out recent information about your favorite animal!</h2>
+                <div id="getinfodiv">
+                    
+                    <div id="getinfo">
+                        <label>Type species name (e.g. Giant panda):</label>
+                        <input type="text" id="species">
+                        <button onclick="getAPI()">Get Information</button>
+                    </div>
+                    <div class="vertline"></div>
+                    <div id="info">
+                        <p>The <span class="name"></span> is classified as <span id="status"></span>.</p>
+                        <p>The <span class="name"></span> also known as <span id="scien"></span> belongs to the family <span id="tax"></span> and is found in <span id="loc"></span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+        <section id="section4">
+            <iframe src="https://www.youtube.com/embed/JJqXeRFsLjE?autoplay=1&mute=1">
+            </iframe>
+
+
+        </section>
+
+
+        <!-- <video controls>
+        <source src="../Images/Bamboo Forest/Panda_video.mp4"> 
+    </video> -->
+
+
+        <footer>
+            <h1>Thank for visiting Cyber Wildlife!</h1>
+            <div id="social">
+                <img src="../Images/Twiiter_image.png">
+                <img src="../Images/Instagram_image.png">
+                <img src="../Images/Facebook_image.png">
+            </div>
+        </footer>
+
+    </body>
+
+</html>

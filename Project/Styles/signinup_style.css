@@ -1,0 +1,114 @@
+
+@font-face {
+    font-family: rubik;
+    src: url(../Fonts/Rubik-VariableFont_wght.ttf);
+    src: url(../Fonts/Rubik-Bold.ttf);
+}
+@font-face {
+    font-family: trocchi;
+    src: url(../Fonts/Trocchi-Regular.ttf);
+}
+
+* {
+    padding: unset;
+    margin: unset;
+    color: var(--color10);
+    border: unset;
+
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color1: #f4f2ef;
+    --color2: #132232;
+    --color3: #6b7d3f;
+    --color4: #937452;
+    --color5: #9cb466;
+    --color6: #73543f;
+    --color7: #4b6071;
+    --color8: #40171d;
+    --color9: #556144;
+    --color10: #30302f;
+    --color11: #839aab;
+    --color12: #434310;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type='button'] {
+    cursor: pointer;
+}
+
+.line {
+    width: 75%;
+    height: 5px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: var(--color1);
+}
+
+#maindiv{
+    background-color: var(--color1);
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+
+    display: grid;
+    justify-content: center;
+    gap:40px;
+
+    font-family: rubik;
+}
+
+#signinform{
+    display: grid;
+    gap:30px;
+}
+
+#signupform{
+    display: none;
+    gap:30px;
+
+}
+
+.inp{
+    display: grid;
+    gap:10px;
+}
+
+.inp input{
+    height: 30px;
+    background-color: rgba(0,0,0,0.1);
+    font-family: trocchi;
+    font-size: 1em;
+    padding: 5px;
+}
+
+button{
+    background-color: var(--color5);
+    border: none;
+    color: white;
+    font-family: rubik;
+
+    padding: 10px;
+    width: 100px;
+    height: fit-content;
+
+}
+
+.inactive{
+
+    background-color: var(--color3);
+    border: none;
+    color: rgba(255,255,255,0.3);
+    font-family: rubik;
+
+    padding: 10px;
+    width: 100px;
+    height: fit-content;
+}

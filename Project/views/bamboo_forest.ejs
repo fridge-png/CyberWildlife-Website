@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bamboo Forest</title>
+
+    <script src="/scripts/script.js"></script>
+    <link rel="stylesheet" href="/styles/animals_style.css">
+
+</head>
+<body>
+    
+    <header>
+
+        <a href="http://localhost:8081/home">Home</a>
+        |
+        <a href="http://localhost:8081/profile">Profile</a>
+        |
+        <a href="http://localhost:8081/about">About</a>
+        |
+        <div class="activelink">
+            Sites
+            <ul>
+                <li><a href="http://localhost:8081/bamboo_forest">Bamboo Forest</a></li>
+                <li><a href="http://localhost:8081/alligator_swamp">Alligator Swamp</a></li>
+                <li><a href="http://localhost:8081/penguin_peak">Penguin Peak</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <section id="section1">
+        <h1>Bamboo Forest: The Home of Pandas</h1>
+        <div id="container">
+            <img src="../Images/Bamboo Forest/Banner_Image2.jpg">
+            <div id="pandas">
+                <h2>PANDAS</h2>
+                <a href="#section4">Go to Live Footage of the Bamboo Forest</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="section2">
+        <h3>Types of Pandas</h3>
+        <div id="flexdiv">
+            <div>
+                <h4>Giant Panda</h4>
+                <p>The giant panda, with its distinctive black and white coat, is adored by the world and considered a national treasure in China.
+                    These pandas live mainly in forests high in the mountains of China, where they subsist almost entirely on bamboo, of which they eat around 26 to 84 pounds every day.
+                    Female pandas can grow up to about 200 pounds, while males can grow up to about 300 pounds as adults. These bears are excellent tree climbers despite their bulk.</p>
+                <img src="../Images/Bamboo Forest/Giantpanda_image.png">
+            </div>
+
+            <div>
+                <h4>Red Panda</h4>
+                <p>The red panda is slightly larger than a domestic cat with a bear-like body and thick russet fur. 
+                    Red pandas are very skillful and acrobatic animals that predominantly stay in trees. Almost 50% of the red panda’s habitat is in the Eastern Himalayas. They use their long, bushy tails for balance and to cover themselves in winter.
+                    Primarily an herbivore, the name panda is said to come from the Nepali word ‘ponya,’ which means bamboo or plant eating animal.</p>
+                <img src="../Images/Bamboo Forest/Redpanda_image.png">
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="line"></div>
+
+    <section id="section3">
+        <h2>Experiences</h2>
+
+        <div id="cards">
+            <% experiences.forEach(element => { %>
+                <div id="card">
+                    <h2> <%= element.title %></h2>
+                    <p id="desc"> <%= element.description %></p>
+                    <img src="<%=element.photo%>">
+                </div>
+            <% }); %>
+
+            <div id="addnew">
+                <button id="plus" onclick="showForm()">+</button>
+
+                <div id="form">
+                    <form action="http://localhost:8081/processForm" method="post" enctype="multipart/form-data" id="expform">
+                
+                        <input type="hidden" value="bamboo_forest" name="original">
+
+                        <div class="inp">
+                            <label for="title">Title: </label>
+                            <input type="text" name="title" required>
+                        </div>
+
+                        <div class="inp">
+                            <label for="desc">Description: </label>
+                            <textarea name="desc" required></textarea>
+                        </div>
+
+                        <div class="inp">
+                            <label for="photo">Photo: 
+                            <input type="file" id="photo" name="user_image" required>
+                            </label>
+                        </div>
+                
+                        <button type="submit" id="submit" name="submit">submit</button>
+                    </form>
+                </div>
+            </div>  
+
+        </div>
+
+        <div class="line"></div>
+
+        <div id="apidiv">
+            <h2>Find out recent information about your favorite animal!</h2>
+            <div id="getinfodiv">
+                
+                <div id="getinfo">
+                    <label>Type species name (e.g. Giant panda):</label>
+                    <input type="text" id="species">
+                    <button onclick="getAPI()">Get Information</button>
+                </div>
+                <div class="vertline"></div>
+                <div id="info">
+                    <p>The <span class="name"></span> is classified as <span id="status"></span>.</p>
+                    <p>The <span class="name"></span> also known as <span id="scien"></span> belongs to the family <span id="tax"></span> and is found in <span id="loc"></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section4">
+        <iframe src="https://www.youtube.com/embed/OObOQ2GElhA?autoplay=1&mute=1">
+        </iframe>
+
+    </section>
+
+
+    <!-- <video controls>
+        <source src="../Images/Bamboo Forest/Panda_video.mp4"> 
+    </video> -->
+
+    
+    <footer>
+        <h1>Thank for visiting Cyber Wildlife!</h1>
+        <div id="social">
+            <img src="../Images/Twiiter_image.png">
+            <img src="../Images/Instagram_image.png">
+            <img src="../Images/Facebook_image.png">
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,435 @@
+/* ---------------------------------------------------------- */
+
+/* GENERAL */
+
+/* ---------------------------------------------------------- */
+
+@font-face {
+    font-family: rubik;
+    src: url(../Fonts/Rubik-VariableFont_wght.ttf);
+    src: url(../Fonts/Rubik-Bold.ttf);
+}
+@font-face {
+    font-family: trocchi;
+    src: url(../Fonts/Trocchi-Regular.ttf);
+}
+
+* {
+    padding: unset;
+    margin: unset;
+    color: var(--color10);
+    border: unset;
+
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color1: #f4f2ef;
+    --color2: #132232;
+    --color3: #6b7d3f;
+    --color4: #937452;
+    --color5: #9cb466;
+    --color6: #73543f;
+    --color7: #4b6071;
+    --color8: #40171d;
+    --color9: #556144;
+    --color10: #30302f;
+    --color11: #839aab;
+    --color12: #434310;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type='button'] {
+    cursor: pointer;
+}
+
+.line {
+    width: 75%;
+    height: 5px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: var(--color1);
+}
+
+/* ---------------------------------------------------------- */
+
+/* HEADER */
+
+/* ---------------------------------------------------------- */
+
+header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    gap: 30px;
+
+    font-family: trocchi;
+    font-size: 1em;
+    font-weight: 100;
+    color: white;
+
+    background-color: var(--color3);
+}
+
+header a {
+    color: white;
+}
+
+header a:hover {
+    color: var(--color5);
+}
+
+header .activelink{
+    color:var(--color5);
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    color: white;
+
+    position: relative;
+}
+
+header div:hover {
+    visibility: hidden;
+}
+
+header div:hover ul {
+    visibility: visible;
+}
+
+header div ul {
+    list-style: none;
+    visibility: hidden;
+    position: absolute;
+
+    width: 200px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* SECTION 1 */
+
+/* ---------------------------------------------------------- */
+
+#section1 {
+    background-color: var(--color1);
+    width: 100%;
+
+    margin-bottom: 50px;
+}
+
+#section1 h1 {
+    font-family: rubik;
+    font-size: 3em;
+    font-weight: bolder;
+
+    text-align: center;
+    padding: 200px 0px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* SECTION 2 */
+
+/* ---------------------------------------------------------- */
+
+#section2 {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+
+#section2 .change {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+
+    background-color: var(--color1);
+}
+
+#section2 .description {
+    padding-bottom: 30px;
+}
+
+#section2 p {
+    margin-bottom: 10px;
+
+    font-family: trocchi;
+    font-size: 2em;
+}
+
+#section2 .cross {
+    width: 30px;
+}
+
+#section2 .animal {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* ---------------------------------------------------------- */
+
+/* SECTION 3 */
+
+/* ---------------------------------------------------------- */
+
+#section3 {
+    display: flex;
+    gap: 50px;
+
+    margin: 80px 0px 50px;
+}
+
+#section3 div {
+    /* display: grid;
+    gap: 20px; */
+
+    background-color: var(--color1);
+    padding: 50px;
+
+    width: 70%;
+}
+#section3 h1 {
+    font-family: rubik;
+    font-size: 3em;
+    font-weight: bolder;
+
+    margin-bottom: 20px;
+}
+
+#section3 ul {
+    list-style-image: url(../Images/About/cross.png);
+    list-style: square;
+}
+
+#section3 li {
+    font-family: trocchi;
+    font-size: 1.5em;
+    word-spacing: 10px;
+
+    margin-bottom: 30px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* SECTION 4 */
+
+/* ---------------------------------------------------------- */
+
+#section4 {
+    margin-bottom: 50px;
+}
+
+#section4 h1 {
+    text-align: center;
+
+    font-family: rubik;
+    font-size: 3em;
+    font-weight: bolder;
+
+    margin-bottom: 20px;
+}
+
+#section4 #images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    justify-content: center;
+}
+
+#section4 #images img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------------------- */
+
+/* FOOTER */
+
+/* ---------------------------------------------------------- */
+
+footer {
+    display: grid;
+    gap: 5px;
+    padding: 10px;
+
+    align-items: center;
+
+    font-family: rubik;
+    font-size: 0.7em;
+    font-weight: 100;
+    background-color: var(--color3);
+
+    height: 100px;
+    text-align: center;
+}
+
+footer h1 {
+    color: white;
+}
+
+footer #social {
+    display: flex;
+    gap: 10px;
+
+    margin: auto;
+}
+
+footer img {
+    width: 30px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* RESPONSIVENESS */
+
+/* ---------------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+    #section1 h1 {
+        padding: 50px 0;
+    }
+
+    #section2 {
+        display: grid;
+    }
+
+    #section2 .animal {
+        width: 250px;
+        height: 250px;
+    }
+
+    #section2 p {
+        font-size: 1em;
+    }
+
+    #section3 img {
+        display: none;
+    }
+
+    #section3 #mission {
+        margin: auto;
+    }
+
+    #section3 li {
+        font-size: 1em;
+    }
+
+    #section4 #images img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+    #section1 h1 {
+        padding: 70px 0;
+    }
+
+    #section2 .animal {
+        width: 250px;
+        height: 250px;
+    }
+
+    #section2 p {
+        font-size: 1.5em;
+    }
+
+    #section3 img {
+        display: none;
+    }
+
+    #section3 #mission {
+        margin: auto;
+    }
+
+    #section3 li {
+        font-size: 1em;
+    }
+
+    #section4 #images img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    #section1 h1 {
+        padding: 100px 0;
+    }
+
+    #section2 {
+        gap: 50px;
+    }
+
+    #section2 .animal {
+        width: 250px;
+        height: 250px;
+    }
+
+    #section2 p {
+        font-size: 1.5em;
+    }
+
+    #section3 img {
+        display: none;
+    }
+
+    #section3 #mission {
+        margin: auto;
+    }
+
+    #section4 #images img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #section1 {
+        font-size: 3em;
+    }
+
+    #section3 img {
+        width: max-content;
+        height: max-content;
+    }
+
+    header {
+        font-size: 1.5em;
+        height: 100px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #section1 {
+        font-size: 3em;
+    }
+
+    #section3 img {
+        width: max-content;
+        height: max-content;
+    }
+
+    header {
+        font-size: 1.5em;
+        height: 100px;
+    }
+}
