@@ -6,11 +6,11 @@ This website was made as a part of my Computer Science Bachelor's Degree.
 
 The website uses HTML/CSS/Javascript with EJS for the frontend, express for the backend, and MongoDB for the database.
 
-Intiutive user interface and design
-Multiple pages
-SignUp/Login functionality
-Posting experiences with text and image upload 
-Rest API calls
+*Intiutive user interface and design
+*Multiple pages
+*SignUp/Login functionality
+*Posting experiences with text and image upload 
+*Rest API calls
 
 
 ## Running
