@@ -7,6 +7,7 @@ This website was made as a part of my Computer Science Bachelor's Degree, comple
 The website uses HTML/CSS/Javascript with EJS for the frontend, express for the backend, and MongoDB for the database.
 
 - Intiutive user interface and design
+- Responsive
 - Multiple pages
 - SignUp/Login functionality
 - Posting experiences with text and image upload 
@@ -28,16 +29,23 @@ The server uploads all images to the "uploads" folder
 You will first see a signin/signup page where you can either create an account or use a pre-existing user (Youssef pass123)
 
 ## Pages
+
 ### Main Page: The website's main page where you can navigate to other pages
-![Image not found](/WebsiteScreenshots/MainPage.jpg?raw=true "Main Page")
+<img src="/WebsiteScreenshots/MainPage.jpg" alt="Image not found." width="700">
+
 ### Animal Description: Page with images and information about each animal as well as see other people's experiences; In addtition to API call to find out more information about animal.
-![Image not found](/WebsiteScreenshots/AnimalDesc.jpg?raw=true "Animal Description")
+
+<img src="/WebsiteScreenshots/AnimalDesc.jpg" alt="Image not found." width="700">
+
 ### About Us: General information
-![Image not found](/WebsiteScreenshots/AboutUs.jpg?raw=true "About Us")
+<img src="/WebsiteScreenshots/AboutUs.jpg" alt="Image not found." width="700">
+
 ### Sign In / Sign Up
-![Image not found](/WebsiteScreenshots/SignInSignUp.jpg?raw=true "Sign In / Sign Up")
-### Profile: Look at own and other people's information and personal experiences. In addition to custom API call. 
-![Image not found](/WebsiteScreenshots/Profile.jpg?raw=true "Profile")
+<img src="/WebsiteScreenshots/SignInSignUp.jpg" alt="Image not found." width="700">
+
+### Profile: Look at own and other people's information and personal experiences. In addition to custom API call.
+<img src="/WebsiteScreenshots/Profile.jpg" alt="Image not found." width="700">
+
 
 
 
