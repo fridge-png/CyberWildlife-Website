@@ -1,6 +1,6 @@
 # CyberWildlife Website
 Website that allows users to view wifelife and share experiences. 
-This website was made as a part of my Computer Science Bachelor's Degree.
+This website was made as a part of my Computer Science Bachelor's Degree, completed with backend and frontend technologies by myself.
 
 ## Funcionality:
 
@@ -11,7 +11,6 @@ The website uses HTML/CSS/Javascript with EJS for the frontend, express for the 
 - SignUp/Login functionality
 - Posting experiences with text and image upload 
 - Rest API calls
-
 
 ## Running
 
@@ -27,4 +26,18 @@ The server uploads all images to the "uploads" folder
 ### Testing
 
 You will first see a signin/signup page where you can either create an account or use a pre-existing user (Youssef pass123)
+
+## Pages
+### Main Page: The website's main page where you can navigate to other pages
+![Image not found](/WebsiteScreenshots/MainPage.jpg?raw=true "Main Page")
+### Animal Description: Page with images and information about each animal as well as see other people's experiences; In addtition to API call to find out more information about animal.
+![Image not found](/WebsiteScreenshots/AnimalDesc.jpg?raw=true "Animal Description")
+### About Us: General information
+![Image not found](/WebsiteScreenshots/AboutUs.jpg?raw=true "About Us")
+### Sign In / Sign Up
+![Image not found](/WebsiteScreenshots/SignInSignUp.jpg?raw=true "Sign In / Sign Up")
+### Profile: Look at own and other people's information and personal experiences. In addition to custom API call. 
+![Image not found](/WebsiteScreenshots/Profile.jpg?raw=true "Profile")
+
+
 
